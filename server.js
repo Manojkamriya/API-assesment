@@ -178,7 +178,7 @@ app.post("/questions/:id/submit", auth, (req, res) => {
       user.answers.push({ id: qId, correct: true });
       user.progress++;
     }
-    return res.json({ correct: true, message: "Correct!" });
+    return res.json({ correct: true, message: "Correct! now again use the /next route for next question" });
   } else {
     return res.json({ correct: false, message: "Wrong, try again!" });
   }
